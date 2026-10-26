@@ -1,0 +1,7 @@
+[MODEL: dataset=your_message_trace_dataset]
+| alter xdm.event.type = "EMAIL"
+| alter xdm.event.outcome = event_status
+| alter xdm.source.user.email_addr = sender_address
+| alter xdm.target.user.email_addr = recipient_address
+| alter xdm.email.subject = subject
+;

@@ -27,7 +27,8 @@ def test_baseintegration_dummy():
     No mock is needed here because the say_hello_command does not call
     any external API.
     """
-    from BaseIntegration import Client, baseintegration_dummy_command
+    from IntegrationColabDemo import Client, baseintegration_dummy_command
+
 
     client = Client(base_url="some_mock_url", verify=False)
     args = {"dummy": "this is a dummy response", "dummy2": "a dummy value"}
